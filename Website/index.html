@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<title>NAU CS499-Network Analysis Project</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="styles.css">
+<style>
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+</style>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card-2">
+    <a href="index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <a href="index.html#team" class="w3-bar-item w3-button w3-padding-large w3-hide-small">TEAM INFO </a>
+    <a href="project.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">PROJECT</a>
+
+    <a href="https://github.com/jls865/499NetworksProject" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CODE</a>
+
+  </div>
+</div>
+
+
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:2000px;margin-top:20px">
+
+  <!-- The Team Section -->
+  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="home">
+    <h1 class="w3-wide">Reddit Analysis</h1>
+    <p class="w3-opacity"><i>NAU CS499-Network Analysis Project</i></p>
+    <p class=".w3-image"><img src="./images/reddit.png"/ style="width:250px;height=250px"></p>
+    <p class="w3-justify"></p>
+    <p>
+    Reddit is an interesting site where people from all over come together to share content that they enjoy. This content can range from news articles, to clips from video games, and of course clips of animals. Reddit is structured in a way so that it is organized into many different communities, where all the posts in those communities tend to follow some sort of theme. The very best posts from those communities (subreddits) are displayed on the front page where everyone can see them.
+    For our project, we want to create a network that shows the interconnectedness of Reddit’s communities. For this network, we will use posts that have reached the front page for our nodes, and we will pick these posts from the “top rated for the year” on Reddit’s front page. This should give us an accurate representation of what kind of content is most popular on Reddit. With this information, we can create connections between posts based on similar content. For example, we could connect a post from one subreddit to another if they both feature a cat in their post. We will then cluster the nodes according to their subreddits, which will allow us to see which communities are alike and which are very different.
+    This information would allow us to see what trends are popular on Reddit in a certain timeframe. It will also visualize the type of content that redditors love and constantly upvote to the front page. We will see what kind of information the users find the most engaging, and it could allow us to see why some posts become so much more popular than others. Depending on what subreddits are most popular, we could potentially draw conclusions on what kind of users make up the majority of Reddit (gamers, sports fans, etc.).
+    To attain this information, we will use the official Reddit api that is available to download on GitHub. We will grab the top posts from r/all (the front page of Reddit) and begin drawing our network using those posts and correlating them to their respective communities. The api provides a lot of information, including information of comments and user data, but we are mostly interested in just using information about posts and their details.
+
+
+
+    </p>
+
+
+    <div class="w3-row w3-padding-16" id="team">
+      <div class="w3-third">
+        <p>Josh Shaffer</p>
+        <img src="./images/josh.png" class="w3-round w3-margin-bottom" alt="Random Name" style="width:110px;height:150px;">
+        <p class="w3-opacity w3-center"><i>Programmer</i></p>
+      </div>
+      <div class="w3-third">
+        <p>Erik Strauss</p>
+        <img src="./images/erik.png" class="w3-round w3-margin-bottom"  style="width:110px;height:150px;">
+        <p class="w3-opacity w3-center"><i>Programmer</i></p>
+      </div>
+      <div class="w3-third">
+        <p>Matthew Quintana</p>
+        <img src="./images/matt.png" class="w3-round w3-margin-bottom" alt="Random Name" style="width:110px;height:150px;">
+        <p class="w3-opacity w3-center"><i>Programmer</i></p>
+      </div>
+    </div>
+
+
+  <!-- The Contact Section -->
+  <div class="w3-container w3-content" style="max-width:800px" id="contact">
+    <h2 class="w3-wide w3-center">CONTACT INFORMATION:</h2>
+    <p class="w3-opacity w3-center"><i>Need to get in contact?</i></p>
+    <div class="w3-row">
+      <div class="w3-col m6 w3-large w3-margin-bottom">
+        <i class="fa fa-map-marker" style="width:30px"></i>Josh Shaffer<br>
+        <i class="fa fa-envelope" style="width:30px"> </i> Email: jls865@nau.edu<br>
+      </div>
+
+      <div class="w3-col m6 w3-large w3-margin-bottom">
+        <i class="fa fa-map-marker" style="width:30px"></i>Erik Strauss<br>
+        <i class="fa fa-envelope" style="width:30px"> </i> Email: ems394@nau.edu<br>
+      </div>
+      <div class="w3-col m6 w3-large w3-margin-bottom">
+        <i class="fa fa-map-marker" style="width:30px"></i>Matthew Quintana<br>
+        <i class="fa fa-envelope" style="width:30px"> </i>Email: mq56@nau.edu<br>
+      </div>
+
+      <div class="w3-col m6 w3-large w3-margin-bottom">
+        <i class="fa fa-map-marker" style="width:30px"></i>Professor:<br>
+        <i class="fa fa-map-marker" style="width:30px"></i> Dr. Morgan Vigil-Hayes<br>
+        <i class="fa fa-envelope" style="width:30px"> </i>
+        <a href= "http://www.vigilant-m.com/">Website</a><br>
+      </div>
+    </div>
+
+
+      </div>
+  </div>
+
+<!-- End Page Content -->
+</div>
+
+
+
+
+</body>
+</html>
