@@ -42,7 +42,7 @@ def generate_data():
                 submission_list.append(sub_dict)
 
             # Create the filename that we want to save each set into
-            filename = type+str(a)+"_data.json"
+            filename = "Data/"+type+str(a)+"_data.json"
             with open(filename, 'w+', encoding='utf-16') as f:
                 # For every submission
                 for submission in submission_list:
