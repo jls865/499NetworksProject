@@ -39,10 +39,21 @@ body {font-family: "Lato", sans-serif}
     <h2 class="w3-wide">Project Information</h2>
       <h3 class="w3-justify">Technical Description:</h3>
       <p class="w3-justify">
-      Reddit is an interesting site where people from all over come together to share content that they enjoy. This content can range from news articles, to clips from video games, and of course clips of animals. Reddit is structured in a way so that it is organized into many different communities, where all the posts in those communities tend to follow some sort of theme. The very best posts from those communities (subreddits) are displayed on the front page where everyone can see them.
-      For our project, we want to create a network that shows the interconnectedness of Reddit’s communities. For this network, we will use posts that have reached the front page for our nodes, and we will pick these posts from the “top rated for the year” on Reddit’s front page. This should give us an accurate representation of what kind of content is most popular on Reddit. With this information, we can create connections between posts based on similar content. For example, we could connect a post from one subreddit to another if they both feature a cat in their post. We will then cluster the nodes according to their subreddits, which will allow us to see which communities are alike and which are very different.
-      This information would allow us to see what trends are popular on Reddit in a certain timeframe. It will also visualize the type of content that redditors love and constantly upvote to the front page. We will see what kind of information the users find the most engaging, and it could allow us to see why some posts become so much more popular than others. Depending on what subreddits are most popular, we could potentially draw conclusions on what kind of users make up the majority of Reddit (gamers, sports fans, etc.).
-      To attain this information, we will use the official Reddit api that is available to download on GitHub. We will grab the top posts from r/all (the front page of Reddit) and begin drawing our network using those posts and correlating them to their respective communities. The api provides a lot of information, including information of comments and user data, but we are mostly interested in just using information about posts and their details.
+      To attain our information, we will use the official Reddit api that is available to download on GitHub. We will grab the top posts from r/all (the front page of Reddit) and begin drawing our network using those posts and correlating them to their respective communities. The api provides a lot of information about each post and allows us to get all its key features.
+      </p>
+
+      <h3 class="w3-justify">Methodology:</h3>
+      <p class="w3-justify">
+        What is the network model you are using to answer your question/solve your problem?<br/>
+        What data are you using to answer your question/solve your problem? How did you obtain the data?<br/>
+        Which metrics/characteristics are you using? What do they mean in the context of your project?<br/>
+        Why are they helping you answer your questoins/solve your problem?<br/>
+      </p>
+
+      <h3 class="w3-justify">Analysis Results:</h3>
+      <p class="w3-justify">
+        What were some of the key findings and insights from your analysis?<br/>
+        Helpful graphs? Tables? Numbers?
       </p>
   </div>
 
@@ -52,8 +63,13 @@ body {font-family: "Lato", sans-serif}
         <p class="w3-justify">
           Insert Visualization and graphs here:
         </p>
+        <img src="images/net.svg" class="w3-justify w3-padding-16"  style="width:700px;height:400px;">
+        <img src="images/network.png" class="w3-justify"  style="width:700px;height:400px;">
+
+
         <p class="w3-justify">
-        Reddit is an interesting site where people from all over come together to share content that they enjoy. This content can range from news articles, to clips from video games, and of course clips of animals. Reddit is structured in a way so that it is organized into many different communities, where all the posts in those communities tend to follow some sort of theme. The very best posts from those communities (subreddits) are displayed on the front page where everyone can see them. For our project, we want to create a network that shows the interconnectedness of Reddit’s communities. For this network, we will use posts that have reached the front page for our nodes, and we will pick these posts from the “top rated for the year” on Reddit’s front page. This should give us an accurate representation of what kind of content is most popular on Reddit. With this information, we can create connections between posts based on similar content. For example, we could connect a post from one subreddit to another if they both feature a cat in their post. We will then cluster the nodes according to their subreddits, which will allow us to see which communities are alike and which are very different. This information would allow us to see what trends are popular on Reddit in a certain timeframe. It will also visualize the type of content that redditors love and constantly upvote to the front page. We will see what kind of information the users find the most engaging, and it could allow us to see why some posts become so much more popular than others. Depending on what subreddits are most popular, we could potentially draw conclusions on what kind of users make up the majority of Reddit (gamers, sports fans, etc.). To attain this information, we will use the official Reddit api that is available to download on GitHub. We will grab the top posts from r/all (the front page of Reddit) and begin drawing our network using those posts and correlating them to their respective communities. The api provides a lot of information, including information of comments and user data, but we are mostly interested in just using information about posts and their details.
+          Nodes in our graph represent posts <br/>
+          Edges in our graph represent subreddits
         </p>
     </div>
 
@@ -63,11 +79,11 @@ body {font-family: "Lato", sans-serif}
           <p class="w3-justify">
             If you are interested in reproducing our analysis, our Jupyter IPython Notebooks can be found on our Github here:
           <p>
-          <a href="https://github.com/jls865/499NetworksProject" class="w3-black w3-button w3-padding-large">GITHUB NOTEBOOKS</a>
+          <a href="https://github.com/jls865/499NetworksProject/tree/master/Notebooks" class="w3-black w3-button w3-padding-large">GITHUB NOTEBOOKS</a>
 
           </p>
           <p class="w3-justify">
-
+            There are sevaral steps and procedures in order to setup our workspace which are detailed on our GitHub above.
           </p>
 
 
@@ -75,12 +91,12 @@ body {font-family: "Lato", sans-serif}
           <p class="w3-justify">
             If you are interested in looking at our data sets that we used they can be found on our Github here:
           <p>
-          <a href="https://github.com/jls865/499NetworksProject" class="w3-black w3-button w3-padding-large">GITHUB DATA</a>
+          <a href="https://github.com/jls865/499NetworksProject/tree/master/Data" class="w3-black w3-button w3-padding-large">GITHUB DATA</a>
 
           </p>
           <p class="w3-justify">
             All of this data was collected using PRAW a python wrapper for the Reddit API.<br/>
-            Each data set we use is a Comma-separated value file (CSV) more information on the data can be found in the GITHUB README
+            Each data set we use is a JSON file, more information on the data can be found on our Github above.
           </p>
       </div>
 
