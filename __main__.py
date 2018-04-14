@@ -4,6 +4,7 @@ from Config import Config
 import praw
 import datetime
 import operator
+import json
 
 def get_time(submission):
     time = submission.created
@@ -14,8 +15,7 @@ redditConfig = Config()
 reddit = redditConfig.getReddit()
 
 def main():
-    #generate_data()
-    pass
+    generate_data()
 
 # Generate a series of data and put them into files
 def generate_data():
@@ -46,10 +46,7 @@ def generate_data():
             with open(filename, 'w+', encoding='utf-16') as f:
                 # For every submission
                 for submission in submission_list:
-                    f.write(str(submission))
-                    f.write("\n")
+                    json.dump(submission, f, indent=4)
 
 if __name__ == "__main__":
-    main()
-
-
+main()
