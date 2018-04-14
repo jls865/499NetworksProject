@@ -1,37 +1,103 @@
 <!DOCTYPE html>
 <html>
-<title>LingoPros</title>
+<title>NAU CS499-Network Analysis Project</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 body {font-family: "Lato", sans-serif}
 .mySlides {display: none}
 </style>
 <body>
-
-<!-- Navbar -->
-<div class="w3-top">
-  <div class="w3-bar w3-black w3-card-2">
-    <a href="index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
-    <a href="index.html#team" class="w3-bar-item w3-button w3-padding-large w3-hide-small">TEAM CONTACT</a>
-    <a href="project.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">PROJECT</a>
-        <a href="https://github.com/jls865/499NetworksProject" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CODE</a>
+  <!-- Navbar -->
+  <div class="w3-top">
+    <div class="w3-bar w3-black w3-card-2">
+      <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right"
+         href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+      <a href="index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+      <a href="index.html#team" class="w3-bar-item w3-button w3-padding-large w3-hide-small">TEAM INFO</a>
+      <a href="project.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">PROJECT</a>
+      <a href="https://github.com/jls865/499NetworksProject" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CODE</a>
+    </div>
   </div>
-</div>
 
-
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+    <a href="index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <a href="project.html" class="w3-bar-item w3-button w3-padding-large">PROJECT</a>
+    <a href="index.html#team" class="w3-bar-item w3-button w3-padding-large">TEAM CONTACT</a>
+    <a href="https://github.com/jls865/499NetworksProject" class="w3-bar-item w3-button w3-padding-large">CODE</a>
+  </div>
 
 <!-- Page content -->
 <div class="w3-content" style="max-width:2000px;margin-top:20px">
 
 <!-- The Requirement Section -->
-  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="home">
-    <h1 class="w3-wide">Project Information</h1>
-    <h2 class="w3-wide"> Check back soon for our Project section</h2>
+  <div class="w3-container w3-content w3-center w3-padding-32" style="max-width:800px" id="home">
+    <h2 class="w3-wide">Project Information</h2>
+      <h3 class="w3-justify">Technical Description:</h3>
+      <p class="w3-justify">
+      Reddit is an interesting site where people from all over come together to share content that they enjoy. This content can range from news articles, to clips from video games, and of course clips of animals. Reddit is structured in a way so that it is organized into many different communities, where all the posts in those communities tend to follow some sort of theme. The very best posts from those communities (subreddits) are displayed on the front page where everyone can see them.
+      For our project, we want to create a network that shows the interconnectedness of Reddit’s communities. For this network, we will use posts that have reached the front page for our nodes, and we will pick these posts from the “top rated for the year” on Reddit’s front page. This should give us an accurate representation of what kind of content is most popular on Reddit. With this information, we can create connections between posts based on similar content. For example, we could connect a post from one subreddit to another if they both feature a cat in their post. We will then cluster the nodes according to their subreddits, which will allow us to see which communities are alike and which are very different.
+      This information would allow us to see what trends are popular on Reddit in a certain timeframe. It will also visualize the type of content that redditors love and constantly upvote to the front page. We will see what kind of information the users find the most engaging, and it could allow us to see why some posts become so much more popular than others. Depending on what subreddits are most popular, we could potentially draw conclusions on what kind of users make up the majority of Reddit (gamers, sports fans, etc.).
+      To attain this information, we will use the official Reddit api that is available to download on GitHub. We will grab the top posts from r/all (the front page of Reddit) and begin drawing our network using those posts and correlating them to their respective communities. The api provides a lot of information, including information of comments and user data, but we are mostly interested in just using information about posts and their details.
+      </p>
+  </div>
+
+  <!-- Visualization Section -->
+    <div class="w3-black w3-container w3-content w3-center w3-padding-16" style="max-width:800px" id="home">
+        <h3 class="w3-justify">Visualization:</h3>
+        <p class="w3-justify">
+          Insert Visualization and graphs here:
+        </p>
+        <p class="w3-justify">
+        Reddit is an interesting site where people from all over come together to share content that they enjoy. This content can range from news articles, to clips from video games, and of course clips of animals. Reddit is structured in a way so that it is organized into many different communities, where all the posts in those communities tend to follow some sort of theme. The very best posts from those communities (subreddits) are displayed on the front page where everyone can see them. For our project, we want to create a network that shows the interconnectedness of Reddit’s communities. For this network, we will use posts that have reached the front page for our nodes, and we will pick these posts from the “top rated for the year” on Reddit’s front page. This should give us an accurate representation of what kind of content is most popular on Reddit. With this information, we can create connections between posts based on similar content. For example, we could connect a post from one subreddit to another if they both feature a cat in their post. We will then cluster the nodes according to their subreddits, which will allow us to see which communities are alike and which are very different. This information would allow us to see what trends are popular on Reddit in a certain timeframe. It will also visualize the type of content that redditors love and constantly upvote to the front page. We will see what kind of information the users find the most engaging, and it could allow us to see why some posts become so much more popular than others. Depending on what subreddits are most popular, we could potentially draw conclusions on what kind of users make up the majority of Reddit (gamers, sports fans, etc.). To attain this information, we will use the official Reddit api that is available to download on GitHub. We will grab the top posts from r/all (the front page of Reddit) and begin drawing our network using those posts and correlating them to their respective communities. The api provides a lot of information, including information of comments and user data, but we are mostly interested in just using information about posts and their details.
+        </p>
+    </div>
+
+    <!-- Data Information and Resources -->
+      <div class="w3-container w3-content w3-center w3-padding-16" style="max-width:800px" id="home">
+          <h3 class="w3-justify">Workspace Setup:</h3>
+          <p class="w3-justify">
+            If you are interested in reproducing our analysis, our Jupyter IPython Notebooks can be found on our Github here:
+          <p>
+          <a href="https://github.com/jls865/499NetworksProject" class="w3-black w3-button w3-padding-large">GITHUB NOTEBOOKS</a>
+
+          </p>
+          <p class="w3-justify">
+
+          </p>
 
 
-</div>
+          <h3 class="w3-justify w3-padding-16">Accessing Our Data Sets:</h3>
+          <p class="w3-justify">
+            If you are interested in looking at our data sets that we used they can be found on our Github here:
+          <p>
+          <a href="https://github.com/jls865/499NetworksProject" class="w3-black w3-button w3-padding-large">GITHUB DATA</a>
+
+          </p>
+          <p class="w3-justify">
+            All of this data was collected using PRAW a python wrapper for the Reddit API.<br/>
+            Each data set we use is a Comma-separated value file (CSV) more information on the data can be found in the GITHUB README
+          </p>
+      </div>
+
+
+
+
+
+<script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
 </body>
 </html>
-
