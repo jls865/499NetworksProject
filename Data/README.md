@@ -44,13 +44,13 @@ class Config:
         return self.reddit
 
 ```
-6. Set up the __init__.py file with this same information:
+6. Set up the "__init__.py" file with this same information:
 ```
 from .Config import Config
 ```
 7. Once you have valid configuration setup you can test to see if it's working
 
-8. While in the same directory as __main__.py run the following command:
+8. While in the same directory as "__main__.py" run the following command:
 ```
 python __main__.py
 ```
