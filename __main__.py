@@ -29,24 +29,39 @@ def generate_data():
             # Create a list to hold the full dictionary of data about a submission
             submission_list = []
             # The fields we want to know about
-            fields = ('title', 'score', 'id', 'author', 'subreddit', 'created', 'url')
+            fields = ("title", "score", "id", "author", "subreddit", "created", "url")
 
-            # For every submission that we want to see
-            for submission in reddit.front.top(limit=a):
-                # Get the different variables that pertain to it
-                to_dict = vars(submission)
-                # Create a dictionary that contains all of the fields that we want
-                # and their related values in the submission
-                sub_dict = {field:str(to_dict[field]) for field in fields}
-                # Add it to the list of submissions
-                submission_list.append(sub_dict)
+            if type == "top":
+                # For every submission that we want to see
+                for submission in reddit.front.top(limit=a):
+                    # Get the different variables that pertain to it
+                    to_dict = vars(submission)
+                    # Create a dictionary that contains all of the fields that we want
+                    # and their related values in the submission
+                    sub_dict = {field:str(to_dict[field]) for field in fields}
+                    # Add it to the list of submissions
+                    submission_list.append(sub_dict)
+            elif type == "hot":
+                # For every submission that we want to see
+                for submission in reddit.front.hot(limit=a):
+                    # Get the different variables that pertain to it
+                    to_dict = vars(submission)
+                    # Create a dictionary that contains all of the fields that we want
+                    # and their related values in the submission
+                    sub_dict = {field:str(to_dict[field]) for field in fields}
+                    # Add it to the list of submissions
+                    submission_list.append(sub_dict)
+
 
             # Create the filename that we want to save each set into
             filename = "Data/"+type+str(a)+"_data.json"
-            with open(filename, 'w+', encoding='utf-16') as f:
+            with open(filename, 'w+') as f:
                 # For every submission
-                for submission in submission_list:
-                    json.dump(submission, f, indent=4)
+                json.dump(submission_list, f, indent=2)
+
+                #for submission in submission_list:
+                #    json.dump(submission, f, indent=2)
+                #    f.write("\n")
 
 if __name__ == "__main__":
 main()
