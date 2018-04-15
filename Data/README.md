@@ -4,19 +4,19 @@ Here is a list of our current data sets and their information:
 hot1000_data- 1000 posts from the frontpage of reddit r/all <br/>
 hot100_data- 100 posts from the frontpage of reddit r/all <br/>
 hot10_data- 10 posts from the frontpage of reddit r/all <br/>
-top1000_data- 1000 posts from the frontpage of reddit r/all
-top100_data- 100 posts from the frontpage of reddit r/all
-top10_data- 10 posts from the frontpage of reddit r/all
+top1000_data- 1000 posts from the frontpage of reddit r/all <br/>
+top100_data- 100 posts from the frontpage of reddit r/all <br/>
+top10_data- 10 posts from the frontpage of reddit r/all <br/>
 
 For every post gathered in the above data sets this information is collected:
 
-title- The title of the post
-score- The overall score of the post (upvotes-downvotes)
-id- The unique id given to the post
-author- The reddit user who created the post
-subreddit- The subreddit that the post originated from
-created- The time that has elapsed from UTC to the time of creation
-url- The url link that was attached to the post
+title- The title of the post <br/>
+score- The overall score of the post (upvotes-downvotes) <br/>
+id- The unique id given to the post <br/>
+author- The reddit user who created the post <br/>
+subreddit- The subreddit that the post originated from <br/>
+created- The time that has elapsed from UTC to the time of creation <br/>
+url- The url link that was attached to the post <br/>
 
 # How to reproduce our data sets or create your own data sets:
 ### Step 1: Configure PRAW with personal data for __main__.py
