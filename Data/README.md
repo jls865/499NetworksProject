@@ -1,12 +1,12 @@
 # Data Set Information
 Here is a list of our current data sets and their information:
 
-hot1000_data- 1000 posts from the frontpage of reddit r/all <br/>
-hot100_data- 100 posts from the frontpage of reddit r/all <br/>
-hot10_data- 10 posts from the frontpage of reddit r/all <br/>
-top1000_data- 1000 posts from the frontpage of reddit r/all <br/>
-top100_data- 100 posts from the frontpage of reddit r/all <br/>
-top10_data- 10 posts from the frontpage of reddit r/all <br/>
+hot1000_data- 1000 hot posts from the frontpage of reddit r/all <br/>
+hot100_data- 100 hot posts from the frontpage of reddit r/all <br/>
+hot10_data- 10 hot posts from the frontpage of reddit r/all <br/>
+top1000_data- 1000 top posts from the frontpage of reddit r/all <br/>
+top100_data- 100 top posts from the frontpage of reddit r/all <br/>
+top10_data- 10 top posts from the frontpage of reddit r/all <br/>
 
 For every post gathered in the above data sets this information is collected:
 
