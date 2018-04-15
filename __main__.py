@@ -64,4 +64,4 @@ def generate_data():
                 #    f.write("\n")
 
 if __name__ == "__main__":
-main()
+    main()
