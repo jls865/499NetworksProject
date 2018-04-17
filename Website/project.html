@@ -37,31 +37,51 @@ body {font-family: "Lato", sans-serif}
 <!-- The Requirement Section -->
   <div class="w3-container w3-content w3-center w3-padding-32" style="max-width:800px" id="home">
     <h2 class="w3-wide">Project Information</h2>
-      <h3 class="w3-justify">Technical Description:</h3>
+      <h2 class="w3-justify">Technical Description:</h2>
       <p class="w3-justify">
-      To attain our information, we will use the official Reddit api that is available to download on GitHub. We will grab the top posts from r/all (the front page of Reddit) and begin drawing our network using those posts and correlating them to their respective communities. The api provides a lot of information about each post and allows us to get all its key features.
+        Reddit is a website where people can essentially post anything they want. This can range from pictures, gifs, and even news articles. Since there is such a wide variety of posts on Reddit, people obviously come to the site for different things. Reddit is separated into different communities that all follow a specific theme of posts. For our project, we want to create a network that represents Reddit’s front page. Reddit’s front page is always changing, so we plan to get data from the top posts in one day for one graph and at the same time we will gather data from the top posts of all time. This will provide two different perspectives that we can use to see how connected Reddit’s communities actually are.
       </p>
 
-      <h3 class="w3-justify">Methodology:</h3>
+      <h2 class="w3-justify">Methodology:</h2>
+
+      <h4 class= "w3-justify">Network Model:</h4>
       <p class="w3-justify">
-        What is the network model you are using to answer your question/solve your problem?<br/>
-        What data are you using to answer your question/solve your problem? How did you obtain the data?<br/>
-        Which metrics/characteristics are you using? What do they mean in the context of your project?<br/>
-        Why are they helping you answer your questoins/solve your problem?<br/>
+        We plan to have a bit of a clustered model to visualize the different subreddits present in our data set. This should show which subreddits are closely related and which are not.<br/>
       </p>
 
-      <h3 class="w3-justify">Analysis Results:</h3>
-      <p class="w3-justify">
-        What were some of the key findings and insights from your analysis?<br/>
-        Helpful graphs? Tables? Numbers?
+      <h4 class= "w3-justify">Data:</h4>
+      <p class ="w3-justify">
+        We are using post titles, post karma, and what subreddit a post was posted in. We retrieved this data using the Python Reddit API Wrapper (PRAW). We will connect the posts with each other and hopefully get a graph that shows the interconnectedness of Reddit’s communities.<br/>
       </p>
+
+      <h4 class= "w3-justify">Network Metrics:</h4>
+      <p class ="w3-justify">
+        We are interested in the overall connectedness of our graph since we want to visualize how connected the different communities of Reddit really are. So we will look for local bridges, local clusters, nodes with high degrees, and maybe the betweenness centrality of the graph. These connections will show how similar some subreddits are to others. For example, if one subreddit is essentially separated from the rest of the graph, then that suggests that subreddit has niche or very specific content. But if a subreddit doesn’t have many local bridges to others, then it would suggest that is a very popular subreddit with a wide range of content.<br/>
+      </p>
+
+      <h2 class="w3-justify">Analysis Results:</h2>
+      <p class="w3-justify">
+        We are still doing research but here are some interesting bar graphs about some of the subreddits:<br/>
+      </p>
+
+      <h4 class= "w3-justify">Top10 r/all Subreddits Bar Graph:</h4>
+      <img src="./images/top10.png" class="w3-round w3-margin-bottom" alt="Top100" style="width:500px;height:400px;">
+
+
+      <h4 class= "w3-justify">Top100 r/all Subreddits Bar Graph:</h4>
+      <img src="./images/top100.png" class="w3-round w3-margin-bottom" alt="Top100" style="width:500px;height:400px;">
+
+      <h4 class= "w3-justify">Top1000 r/all Subreddits Bar Graph:</h4>
+      <img src="./images/top1000.png" class="w3-round w3-margin-bottom" alt="Top100" style="width:500px;height:400px;">
+
+
   </div>
 
   <!-- Visualization Section -->
     <div class="w3-black w3-container w3-content w3-center w3-padding-16" style="max-width:800px" id="home">
         <h3 class="w3-justify">Visualization:</h3>
         <p class="w3-justify">
-          Insert Visualization and graphs here:
+          Insert Visualizations and Graphs here:
         </p>
         <img src="images/net.svg" class="w3-justify w3-padding-16"  style="width:700px;height:400px;">
         <img src="images/network.png" class="w3-justify"  style="width:700px;height:400px;">
@@ -69,7 +89,7 @@ body {font-family: "Lato", sans-serif}
 
         <p class="w3-justify">
           Nodes in our graph represent posts <br/>
-          Edges in our graph represent subreddits
+          Edges in our graph represent similarities between posts like subreddits or submission type
         </p>
     </div>
 
@@ -99,8 +119,6 @@ body {font-family: "Lato", sans-serif}
             Each data set we use is a JSON file, more information on the data can be found on our Github above.
           </p>
       </div>
-
-
 
 
 
