@@ -20,6 +20,7 @@ body {font-family: "Lato", sans-serif}
       <a href="index.html#team" class="w3-bar-item w3-button w3-padding-large w3-hide-small">TEAM INFO</a>
       <a href="project.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">PROJECT</a>
       <a href="https://github.com/jls865/499NetworksProject" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CODE</a>
+      <a href="./images/report.pdf" class="w3-bar-item w3-button w3-padding-large w3-hide-small">PROJECT REPORT</a>
     </div>
   </div>
 
@@ -28,6 +29,7 @@ body {font-family: "Lato", sans-serif}
     <a href="index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
     <a href="project.html" class="w3-bar-item w3-button w3-padding-large">PROJECT</a>
     <a href="index.html#team" class="w3-bar-item w3-button w3-padding-large">TEAM CONTACT</a>
+    <a href="./images/report.pdf" class="w3-bar-item w3-button w3-padding-large">PROJECT REPORT</a>
     <a href="https://github.com/jls865/499NetworksProject" class="w3-bar-item w3-button w3-padding-large">CODE</a>
   </div>
 
@@ -39,7 +41,15 @@ body {font-family: "Lato", sans-serif}
     <h2 class="w3-wide">Project Information</h2>
       <h2 class="w3-justify">Technical Description:</h2>
       <p class="w3-justify">
-        Reddit is a website where people can essentially post anything they want. This can range from pictures, gifs, and even news articles. Since there is such a wide variety of posts on Reddit, people obviously come to the site for different things. Reddit is separated into different communities that all follow a specific theme of posts. For our project, we want to create a network that represents Reddit’s front page. Reddit’s front page is always changing, so we plan to get data from the top posts in one day for one graph and at the same time we will gather data from the top posts of all time. This will provide two different perspectives that we can use to see how connected Reddit’s communities actually are.
+        Reddit is a website where people can essentially post anything they want. This can range from
+         pictures, gifs, and even news articles. Since there is such a wide variety of posts on Reddit
+         , people obviously come to the site for different things. Reddit is separated into different
+          communities that all follow a specific theme of posts. For our project, we want to create
+          a network that represents Reddit’s front page. Reddit’s front page is always changing,
+          so we plan to get data from the top posts in one day for one graph and at the same time we
+          will gather data from the top posts of all time.
+          This will provide two different perspectives that we can use to see how connected Reddit’s
+          communities actually are.
       </p>
 
       <h2 class="w3-justify">Methodology:</h2>
@@ -51,17 +61,34 @@ body {font-family: "Lato", sans-serif}
 
       <h4 class= "w3-justify">Data:</h4>
       <p class ="w3-justify">
-        We are using post titles, post karma, and what subreddit a post was posted in. We retrieved this data using the Python Reddit API Wrapper (PRAW). We will connect the posts with each other and hopefully get a graph that shows the interconnectedness of Reddit’s communities.<br/>
+        We are using post titles, authors, karma, date, and what subreddit a post was posted in. We retrieved this data using the Python Reddit API Wrapper (PRAW). We will connect the posts with each other and hopefully get a graph that shows the interconnectedness of Reddit’s communities.<br/>
       </p>
 
       <h4 class= "w3-justify">Network Metrics:</h4>
       <p class ="w3-justify">
-        We are interested in the overall connectedness of our graph since we want to visualize how connected the different communities of Reddit really are. So we will look for local bridges, local clusters, nodes with high degrees, and maybe the betweenness centrality of the graph. These connections will show how similar some subreddits are to others. For example, if one subreddit is essentially separated from the rest of the graph, then that suggests that subreddit has niche or very specific content. But if a subreddit doesn’t have many local bridges to others, then it would suggest that is a very popular subreddit with a wide range of content.<br/>
+        We are interested in the overall connectedness of our graph since we want to visualize how connected the different
+        communities of Reddit really are. So we will look for local bridges, local clusters, nodes with
+         high degrees. These connections will show how similar some subreddits are to others.
+         For example, if one subreddit is essentially separated from the rest of the graph, then that
+         suggests that subreddit has niche or very specific content. But if a subreddit doesn’t have
+         many local bridges to others, then it would suggest that is a very popular subreddit with a
+         wide range of content. We are also interested in looking at the number of posts from each subreddit that make it to the front page<br/>
       </p>
 
       <h2 class="w3-justify">Analysis Results:</h2>
       <p class="w3-justify">
-        We are still doing research but here are some interesting bar graphs about some of the subreddits:<br/>
+        From our data, a large proportion of front page posts come from only a few different subreddits.
+         For example, although we used data from 1000 different top submissions, less than 50 subreddits actually
+         are relevant. This is evident as hundreds of front page posts are attributed to the subreddits of r/pics,
+         r/funny, r/gifs and r/aww, subreddits that are related to more general topics that allow for
+         a wider range of content to be submitted.</br></br>
+         We have found that the front page of Reddit usually only features a select number of subreddits.
+         This could be due to the fact that usually every users front page is different depending on
+         what subreddits they are subscribed to. For the purpose of this experiment we had used a fresh
+         account to do the analysis so its front page has the same content as every other basic user.</br></br>
+        We got six different data sets for our analysis and they are divided into two categories top posts of all time and the current hot posts as of April, 14, 2018.
+        The six data sets are displayed below as bar graphs based on number of posts from each subreddit.
+
       </p>
 
       <h4 class= "w3-justify">Top10 r/all Subreddits Bar Graph:</h4>
@@ -75,22 +102,46 @@ body {font-family: "Lato", sans-serif}
       <img src="./images/top1000.png" class="w3-round w3-margin-bottom" alt="Top100" style="width:500px;height:400px;">
 
 
+      <h4 class= "w3-justify">Hot10 r/all Subreddits Bar Graph:</h4>
+      <img src="./images/hot10.png" class="w3-round w3-margin-bottom" alt="Top100" style="width:500px;height:400px;">
+
+
+      <h4 class= "w3-justify">Hot100 r/all Subreddits Bar Graph:</h4>
+      <img src="./images/hot100.png" class="w3-round w3-margin-bottom" alt="Top100" style="width:500px;height:400px;">
+
+      <h4 class= "w3-justify">Hot1000 r/all Subreddits Bar Graph:</h4>
+      <img src="./images/hot1000.png" class="w3-round w3-margin-bottom" alt="Top100" style="width:500px;height:400px;">
+
   </div>
 
   <!-- Visualization Section -->
-    <div class="w3-black w3-container w3-content w3-center w3-padding-16" style="max-width:800px" id="home">
+    <div class="w3-black w3-container w3-content w3-center w3-padding-16" id="home">
         <h3 class="w3-justify">Visualization:</h3>
         <p class="w3-justify">
-          Insert Visualizations and Graphs here:
+          Here we took the subreddits present in the "Top 100" data set and created a network graph based
+          on the similarities in post content. Nodes are connected if the content between them is very
+          similar in format or in types of posts. We characterize similarities between posts by looking
+          at whether the content of it was an image, a text post, or a hyperlink to an external location.
+          We can see a clear distinction between news and blog subreddits compared to picture and video
+          subreddits. We can also see that r/pics is at the center of all of the picture subreddits.
+          It appears too that r/movies is the real link between the picture subreddits and the more
+          text-based and article-based subreddits.
         </p>
-        <img src="images/net.svg" class="w3-justify w3-padding-16"  style="width:700px;height:400px;">
-        <img src="images/network.png" class="w3-justify"  style="width:700px;height:400px;">
+        <img src="images/top100net.PNG" class="w3-justify w3-padding-32"  style="width:800px;height:600px;">
 
 
         <p class="w3-justify">
-          Nodes in our graph represent posts <br/>
-          Edges in our graph represent similarities between posts like subreddits or submission type
+          In the below graph nodes are posts that are connected by edges between authors and subreddits of the posts.
         </p>
+        <img src="images/networks.png" class="w3-justify w3-padding-32"  style="width:800px;height:600px;">
+        <p class="w3-justify">
+          The graph below displays some of the top post authors (nodes) connected with specific subreddits(nodes).
+          This relation between the different subreddits that appear on the front page and their authors help to see if specific authors reached the front page more than others.
+          It seems that they do.
+        </p>
+        <img src="images/image.png" class="w3-justify w3-padding-16"  style="width:800px;height:600px;">
+
+
     </div>
 
     <!-- Data Information and Resources -->
